@@ -1,14 +1,16 @@
 {
   "dependencies": {
-    "bulma": "^1.0.3",
-    "live-server": "^1.2.2",
-    "sass": "^1.85.0"
+    "@tailwindcss/postcss": "^4.0.9"
   },
   "scripts": {
-    "sass-watch": "sass --watch scss/theme.scss:css/main.css --load-path=./node_modules/",
-    "sass-build": "sass scss/theme.scss css/main.css --style compressed --load-path=./node_modules/",
-    "live": "npm run sass-watch & live-server --watch=css,js,*.html",
-    "dev": "npm run sass-watch & npm run live",
-    "build": "npm run sass-build && cp css/* build/css/ && cp turbulentarius.html build/"
+    "build": "postcss src/styles/tailwind.css -o build/css/main.css --watch",
+    "dev": "concurrently \"npm run build\" \"live-server --entry-file=turbulentarius.html ./\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "live-server": "^1.2.2",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^4.0.9"
   }
 }
