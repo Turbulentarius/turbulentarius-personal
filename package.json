@@ -3,7 +3,7 @@
     "bootstrap": "^5.3.3"
   },
   "scripts": {
-"build": "sass src/styles/bootstrap.scss build/css/main.css --watch",
+    "build": "sass src/styles/bootstrap.scss build/css/main.css --watch",
     "dev": "concurrently \"npm run build\" \"live-server --entry-file=turbulentarius.html ./\""
   },
   "devDependencies": {
