@@ -5,10 +5,10 @@
     "sass": "^1.85.0"
   },
   "scripts": {
-    "sass-watch": "sass --watch scss/theme.scss:css/main.css --load-path=./node_modules/",
-    "sass-build": "sass scss/theme.scss css/main.css --style compressed --load-path=./node_modules/",
+    "sass-watch": "sass --watch scss/theme.scss:build/css/main.css --load-path=./node_modules/",
+    "sass-build": "sass scss/theme.scss build/css/main.css --style compressed --load-path=./node_modules/",
     "live": "npm run sass-watch & live-server --watch=css,js,*.html",
     "dev": "npm run sass-watch & npm run live",
-    "build": "npm run sass-build && cp css/* build/css/ && cp turbulentarius.html build/"
+    "build": "npm run sass-build"
   }
 }
