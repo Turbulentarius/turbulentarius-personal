@@ -1,66 +1,70 @@
-<!document html>
-  <html lang="en" data-theme="light">
-
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
     <title>Turbulentarius — Portfolio</title>
     <style>
-      .container .skillList {
-        justify-content: center;
+      article .skillList {
+        display:flex;
+        flex-wrap:wrap;
+        gap:0.5rem;
       }
-
-      .container .skillList li {
-        list-style-type: none;
-        padding: 0.5rem;
-        margin: 0.25rem 0.25rem;
-        border: 1px solid #c0c0c0;
-        border-color: var(--bulma-warning-light);
-        color: var(--bulma-warning);
-        border-radius: 1rem;
+      article .skillList li {
+        list-style-type:none;
+        background: var(--industrial-metal);
+        border-radius: 0.5rem;
+        margin: 0;
+        min-height:2rem;
         min-width: 100px;
-        text-align: center;
+        text-align:center;
+        padding:0.5rem;
       }
     </style>
   </head>
 
   <body>
     <div class="container">
-      <header class="hero mx-4 my-4">
+      <header class="mx-4 my-4">
         <div class="media">
-          <div class="media-left">
-            <figure class="image is-48x48">
-              <img src="/profile1small.jpg" alt="Placeholder image" />
-            </figure>
-          </div>
-          <div class="media-content">
-            <h1 class="title is-4">Jacob Kristensen</h1>
-            <p class="subtitle is-6"><a href="https://github.com/Turbulentarius">@turbulentarius</a></p>
+          <figure class="image pr-2 is-64x64 is-rounded">
+            <img src="/profile1small.jpg" class="is-rounded" alt="Jacob" />
+          </figure>
+          <div class="is-family-monospace media-content">
+            <div class="is-size-4 has-text-weight-bold">Jacob Kristensen</div>
+            <div>
+              <a href="https://github.com/Turbulentarius">@turbulentarius</a>
+            </div>
           </div>
         </div>
 
-        <div class="content">
-          <p>I am a Web Developer from Denmark with a diverse skill set and a passion for technology.</p>
+        <div class="px-4 py-4">
+          <p>
+            I am a Web Developer from Denmark with a diverse skill set and a
+            passion for technology.
+          </p>
 
-          <p>Currently, I am pursuing a Bachelor's degree in Web Development at Zealand, where I am honing my skills
-            and diving deep into React.</p>
+          <p>
+            Currently, I am pursuing a Bachelor's degree in Web Development at
+            Zealand, where I am honing my skills and diving deep into React.
+          </p>
         </div>
 
         <nav class="breadcrumb" aria-label="breadcrumbs">
           <ul>
-            <li><b class="mr-4">Home</b></li>
-            <li class="my-0"><a href="work.html">Employment history</a></li>
-            <li class="my-0"><a href="project.html">Personal projects</a></li>
+            <li><b class="mr-3">Home</b></li>
+            <li><a class="is-link" href="work.html">Employment history</a></li>
+            <li><a href="project.html">Projects</a></li>
           </ul>
         </nav>
       </header>
 
-      <article class="content">
-        <h2 class="has-background-warning-95 py-2 px-2">Skills</h2>
+      <article>
+        <h1 class="py-2 px-2 has-text-weight-bold is-size-4 is-family-sans-serif">Skills</h1>
 
-        <section class="py-4">
-          <h3 class="py-2 px-2 has-text-centered">code</h3>
-          <ul class="is-flex is-flex-wrap-wrap skillList">
+        <section class="py-4 px-4">
+          <h3 class="py-2 px-2 is-size-5">code</h3>
+          <ul class="skillList">
             <li>Vue.js</li>
             <li>Git</li>
             <li>Symfony</li>
@@ -86,9 +90,9 @@
           </ul>
         </section>
 
-        <section class="py-4">
-          <h3 class="py-2 px-2 has-text-centered">cms</h3>
-          <ul class="is-flex skillList">
+        <section class="py-4 px-4">
+          <h3 class="py-2 px-2 is-size-5">cms</h3>
+          <ul class="skillList">
             <li>Shopware 6</li>
             <li>Nextcloud</li>
             <li>Wordpress</li>
@@ -96,9 +100,9 @@
           </ul>
         </section>
 
-        <section class="py-4">
-          <h3 class="py-2 px-2 has-text-centered">server</h3>
-          <ul class="is-flex skillList">
+        <section class="py-4 px-4">
+          <h3 class="py-2 px-2 is-size-5">server</h3>
+          <ul class="skillList">
             <li>Docker</li>
             <li>MySQL</li>
             <li>Apache</li>
@@ -108,10 +112,7 @@
             <li>node.js</li>
           </ul>
         </section>
-
-
       </article>
     </div>
   </body>
-
-  </html>
+</html>

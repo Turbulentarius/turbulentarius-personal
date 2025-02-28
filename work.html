@@ -1,103 +1,132 @@
-<!document html>
-    <html lang="en" data-theme="light">
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Turbulentarius — Portfolio</title>
+  </head>
 
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/main.css">
-        <title>Turbulentarius — Portfolio</title>
-    </head>
-
-    <body>
-        <div class="container">
-            <header class="hero mx-4 my-4">
-                <div class="media">
-                    <div class="media-left">
-                        <figure class="image is-48x48">
-                            <img src="/profile1small.jpg" alt="Placeholder image" />
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <h1 class="title is-4">Jacob Kristensen | Work history</h1>
-                        <p class="subtitle is-6"><a href="https://github.com/Turbulentarius">@turbulentarius</a></p>
-                    </div>
-                </div>
-
-                <div class="content">
-                    <p>I am a Web Developer from Denmark with a diverse skill set and a passion for technology.</p>
-
-                    <p>Currently, I am pursuing a Bachelor's degree in Web Development at Zealand, where I am honing my
-                        skills and diving deep into React.</p>
-                </div>
-
-                <nav class="breadcrumb" aria-label="breadcrumbs">
-                    <ul>
-                        <li class="my-0"><a href="turbulentarius.html">Home</a></li>
-                        <li class="my-0"><b class="mx-4">Employment history</b></li>
-                        <li class="my-0"><a href="project.html">Personal projects</a></li>
-                    </ul>
-                </nav>
-            </header>
-            
-            <article class="content">
-
-                <section class="mb-4 px-4 has-background-warning-95 has-text-warning-95-invert">
-                    <h2 class="title mb-2">Fitness Engros</h2>
-                    <div class="mb-4"><i>Febuary 2022</i> to <i>Marts 2024</i> — Full Stack Developer</div>
-                    <div class="px-4 py-4">
-                        <p>Fitness Engross was using an old version of <b>Shopware</b> that had various bugs and
-                            problems — all of which I solved — one of the most serious bugs prevented us from updating.
-                        </p>
-
-                        <p>Overall I am very satisfied with my acomplishments in this position, and not least thankful
-                            that Fitness Engros entrusted me with their system.</p>
-
-                        <p>When I was hired, I had no previous experience with <b>Shopware</b>,
-                            including some of the technologies Shopware is built with.
-                            This meant I had to learn things like <i>Vue.js</i>, <i>twig</i>, and how to setup
-                            <i>Elasticsearch</i>,
-                            with little assistence from other developers.
-                            In fact, I was even diving so deeply into Shopware's own code, that I managed to discover
-                            and file <a href="https://github.com/shopware/shopware/issues/2532">an issue</a> that was
-                            causing massive use of disk space in our Shop.
-                        </p>
-                        <p>I credit my former boss, Gitte Olrik, for getting me started with <b>TailwindCSS</b>,
-                            <b>Vue.JS</b>, and amusingly introducing me to the <b>grep</b> command.
-                            Her initial push has given me a solid foundation to build on, which proved valuable at
-                            Zealand.</p>
-                    </div>
-                    <div class="has-text-centered py-4"><b>Tech</b>:
-                        <i>Shopware</i>, <i>Vue.js</i>, <i>PHP</i>, <i>Composer</i>, <i>Twig</i>, <i>Tailwindcss</i>,
-                        <i>Nginx</i>, <i>Redis</i>, <i>MariaDB</i>, <i>Elasticsearch</i>, <i>Cron</i>
-                    </div>
-                </section>
-
-                <section class="mb-4 px-4 has-background-warning-95 has-text-warning-95-invert">
-                    <h2 class="title mb-2">BITD ApS / Virtuly ApS</h2>
-                    <div class="mb-4">~ <i>2021</i> to <i>2022</i> — Wordpress Developer</div>
-                    <div class="px-4 py-4">
-                        <p>I worked with various ad-hoc Wordpress development tasks for their clients.
-                            Doing this time I became quite good at creating and working with Wordpress plugins, as well
-                            as custom Themes.</p>
-
-                        <p>Of course I already had experience with PHP, but my familiarity with Wordpress was still
-                            limited to what I had learnt at KEA at this point.</p>
-
-                        <p>I mostly did front-end work that involved HTML, CSS, and JavaScript,
-                            typically created as CMS editor components or simply injected via custom plugins and themes.
-                        </p>
-
-                        <p>Wordpress was a bit tough to work with,
-                            because some of their clients had absolutely huge <i>functions.php</i> file, which involved
-                            a lot of scrolling up and down just to find things.
-                            This was before I knew about <b>grep -r "something"</b>.</p>
-                    </div>
-                    <div class="has-text-centered py-4"><b>Tech</b>:
-                        <i>Wordpress</i>, <i>PHP</i>, <i>JavaScript</i>, <i>HTML</i>, <i>CSS</i>
-                    </div>
-                </section>
-
-            </article>
+  <body>
+    <div class="container">
+      <header class="mx-4 my-4">
+        <div class="media">
+          <figure class="image pr-2 is-64x64 is-rounded">
+            <img src="/profile1small.jpg" class="is-rounded" alt="Jacob" />
+          </figure>
+          <div class="is-family-monospace media-content">
+            <div class="is-size-4 has-text-weight-bold">Jacob Kristensen</div>
+            <div>
+              <a href="https://github.com/Turbulentarius">@turbulentarius</a>
+            </div>
+          </div>
         </div>
-    </body>
 
-    </html>
+        <div class="px-4 py-4 font-serif">
+          <p>
+            I am a Web Developer from Denmark with a diverse skill set and a
+            passion for technology.
+          </p>
+
+          <p>
+            Currently, I am pursuing a Bachelor's degree in Web Development at
+            Zealand, where I am honing my skills and diving deep into React.
+          </p>
+        </div>
+
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+          <ul>
+            <li><a class="is-link" href="turbulentarius.html">Home</a></li>
+            <li><b class="mx-4">Employment history</b></li>
+            <li><a href="project.html">Projects</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <article id="contentPage">
+        <h1 class="py-2 px-2 is-size-4 has-text-weight-bold is-family-sans-serif">Employment history</h1>
+
+        <section class="mb-4 px-4 py-4">
+          <h2 class="has-text-weight-normal is-family-sans-serif mb-2 is-size-5">Fitness Engros</h2>
+          <div class="mb-4 has-text-weight-normal is-family-sans-serif">
+            <i>Febuary 2022</i> to <i>Marts 2024</i> — Full Stack Developer
+          </div>
+          <div class="px-4 py-4">
+            <p>
+              Fitness Engross was using an old version of <b>Shopware</b> that
+              had various bugs and problems — all of which I solved — one of the
+              most serious bugs prevented us from updating.
+            </p>
+
+            <p>
+              Overall I am very satisfied with my acomplishments in this
+              position, and not least thankful that Fitness Engros entrusted me
+              with their system.
+            </p>
+
+            <p>
+              When I was hired, I had no previous experience with
+              <b>Shopware</b>, including some of the technologies Shopware is
+              built with. This meant I had to learn things like <i>Vue.js</i>,
+              <i>twig</i>, and how to setup <i>Elasticsearch</i>, with little
+              assistence from other developers. In fact, I was even diving so
+              deeply into Shopware's own code, that I managed to discover and
+              file
+              <a href="https://github.com/shopware/shopware/issues/2532"
+                >an issue</a
+              >
+              that was causing massive use of disk space in our Shop.
+            </p>
+            <p>
+              I credit my former boss, Gitte Olrik, for getting me started with
+              <b>TailwindCSS</b>, <b>Vue.JS</b>, and amusingly introducing me to
+              the <b>grep</b> command. Her initial push has given me a solid
+              foundation to build on, which proved valuable at Zealand.
+            </p>
+          </div>
+          <div class="has-text-weight-normal is-family-sans-serif">
+            <b>Tech</b>: <i>Shopware</i>, <i>Vue.js</i>, <i>PHP</i>,
+            <i>Composer</i>, <i>Twig</i>, <i>Tailwindcss</i>, <i>Nginx</i>,
+            <i>Redis</i>, <i>MariaDB</i>, <i>Elasticsearch</i>, <i>Cron</i>
+          </div>
+        </section>
+
+        <section class="mb-4 px-4 py-4">
+          <h2 class="has-text-weight-normal is-family-sans-serif is-size-5">BITD ApS / Virtuly ApS</h2>
+          <div class="mb-4 font-sans">
+            ~ <i>2021</i> to <i>2022</i> — Wordpress Developer
+          </div>
+          <div class="px-4 py-4">
+            <p>
+              I worked with various ad-hoc Wordpress development tasks for their
+              clients. Doing this time I became quite good at creating and
+              working with Wordpress plugins, as well as custom Themes.
+            </p>
+
+            <p>
+              Of course I already had experience with PHP, but my familiarity
+              with Wordpress was still limited to what I had learnt at KEA at
+              this point.
+            </p>
+
+            <p>
+              I mostly did front-end work that involved HTML, CSS, and
+              JavaScript, typically created as CMS editor components or simply
+              injected via custom plugins and themes.
+            </p>
+
+            <p>
+              Wordpress was a bit tough to work with, because some of their
+              clients had absolutely huge <i>functions.php</i> file, which
+              involved a lot of scrolling up and down just to find things. This
+              was before I knew about <b>grep -r "something"</b>.
+            </p>
+          </div>
+          <div class="has-text-weight-normal is-family-sans-serif">
+            <b>Tech</b>: <i>Wordpress</i>, <i>PHP</i>, <i>JavaScript</i>,
+            <i>HTML</i>, <i>CSS</i>
+          </div>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

@@ -12,19 +12,23 @@
       For this reason alone, I will be extremely unlikely to ever use Bulma for personal projects.
 */
 
-// Override Bulma's variables
-$primary: rgb(87, 196, 255);
 
-// Override global Sass variables from the /utilities folder 
 @use "bulma/sass/utilities";
 
+$industrial-metal: #e0e0e0;
+$industrial-text-dark: #5a4633;
+$industrial-text: #5c5c5c;
+$industrial: #e6a600;
+$industrial-light: #ffbf00;
 
-// Import the components you need
-@forward "bulma/sass/base";
+// Import only stuff we use
+@use "bulma/sass/base";
 // @forward "bulma/sass/helpers/color"; // Adds (This alone adds 194.44 kB)
-@forward "bulma/sass/helpers";
-@forward "bulma/sass/elements";
-@forward "bulma/sass/layout";
+@use "bulma/sass/helpers";
+@use "bulma/sass/elements";
+@use "bulma/sass/components/breadcrumb";
+@use "bulma/sass/layout";
+
 
 @use "bulma/sass/themes/light";
 @use "bulma/sass/themes/setup";
@@ -33,4 +37,37 @@ $primary: rgb(87, 196, 255);
 :root {
   @include light.light-theme;
   @include setup.setup-theme;
+
+  --industrial-metal: #{$industrial-metal};
+}
+
+body {
+  font-family: serif;
+  color: $industrial-text-dark;
+}
+
+a:link {color: #2b7fff;}
+a:visited {color: #2b7fff;}
+a:hover {color: #1447e6;}
+a:active {color: #2b7fff;}
+
+p {padding:0 0 0.5rem}
+
+body article#contentPage h1, body article#contentPage section h2 {
+  color: $industrial-text-dark;
+}
+body article h1 {
+  background: #ffbf00;
+}
+article#contentPage section {
+  background: $industrial-metal;
+  border-radius: 0.5rem;
+  margin:1rem;
+}
+
+@media (min-width: 1024px) {
+  body article h1 {
+    border-radius: 0.5rem;
+    color: $industrial-text-dark;
+  }
 }
