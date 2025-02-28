@@ -1,43 +1,52 @@
-@import "tailwindcss";
-
+@import 'tailwindcss';
 
 @theme {
-    --color-industrial-metal: #e0e0e0;
-    --color-industrial-text-dark: #5a4633;
-    --color-industrial-text: #5c5c5c;
-    --color-industrial: #e6a600;
-    --color-industrial-light: #ffbf00;
+  --color-industrial-metal: #e0e0e0;
+  --color-industrial-text-dark: #5a4633;
+  --color-industrial-text: #5c5c5c;
+  --color-industrial: #e6a600;
+  --color-industrial-light: #ffbf00;
 }
 
 body {
-    color: var(--color-industrial-text-dark);
-    @apply antialiased font-serif;
+  color: var(--color-industrial-text-dark);
+  @apply antialiased font-serif;
+}
+
+header nav li::after {
+  content: '/';
+  @apply mx-2 text-xl;
+  color: var(--color-industrial-metal);
+}
+
+header nav li:last-child::after {
+  content: '';
 }
 
 #contentPage section {
-    @apply mx-4 my-4 px-4 rounded-lg bg-industrial-metal;
+  @apply mx-4 my-4 px-4 rounded-lg bg-industrial-metal;
 }
 article h1 {
-    @apply bg-industrial-light py-2 px-2 text-2xl min-w-full font-bold xl:rounded-lg font-sans;
+  @apply bg-industrial-light py-2 px-2 text-2xl min-w-full font-bold xl:rounded-lg font-sans;
 }
 article h2 {
-    @apply font-sans;
+  @apply font-sans;
 }
 
 p {
-    @apply pb-4;
+  @apply pb-4;
 }
 
 .skillList {
-    @apply list-none flex flex-wrap;
+  @apply list-none flex flex-wrap;
 }
 
 .skillList li {
-    color: var(--color-industrial-text-dark);
-    background: var(--color-industrial-metal);
-    @apply text-center min-w-24 mx-1 my-1 py-2 px-2 rounded-lg antialiased;
+  color: var(--color-industrial-text-dark);
+  background: var(--color-industrial-metal);
+  @apply text-center min-w-24 mx-1 my-1 py-2 px-2 rounded-lg antialiased;
 }
-  
+
 a {
-    @apply font-medium text-blue-600 dark:text-blue-500 hover:text-blue-700;
+  @apply font-medium text-blue-600 dark:text-blue-500 hover:text-blue-700;
 }
