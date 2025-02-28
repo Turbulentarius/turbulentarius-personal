@@ -3,8 +3,9 @@
     "@tailwindcss/postcss": "^4.0.9"
   },
   "scripts": {
-    "build": "postcss src/styles/tailwind.css -o build/css/main.css --watch",
-    "dev": "concurrently \"npm run build\" \"live-server --entry-file=turbulentarius.html ./\""
+    "build": "postcss src/styles/tailwind.css -o build/css/main.css",
+    "build-watch": "postcss src/styles/tailwind.css -o build/css/main.css --watch",
+    "dev": "concurrently \"npm run build-watch\" \"live-server --entry-file=turbulentarius.html ./\""
   },
   "devDependencies": {
     "concurrently": "^9.1.2",
