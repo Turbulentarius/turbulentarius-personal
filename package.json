@@ -1,16 +1,14 @@
 {
   "dependencies": {
-    "@tailwindcss/postcss": "^4.0.9"
+    "bootstrap": "^5.3.3"
   },
   "scripts": {
-    "build": "postcss src/styles/tailwind.css -o build/css/main.css --watch",
+"build": "sass src/styles/bootstrap.scss build/css/main.css --watch",
     "dev": "concurrently \"npm run build\" \"live-server --entry-file=turbulentarius.html ./\""
   },
   "devDependencies": {
     "concurrently": "^9.1.2",
     "live-server": "^1.2.2",
-    "postcss": "^8.5.3",
-    "postcss-cli": "^11.0.0",
-    "tailwindcss": "^4.0.9"
+    "sass": "^1.85.1"
   }
 }

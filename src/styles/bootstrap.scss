@@ -1,0 +1,29 @@
+$industrial-metal: #e0e0e0;
+$industrial-text-dark: #5a4633;
+$industrial-text: #5c5c5c;
+$industrial: #e6a600;
+$industrial-light: #ffbf00;
+
+// Redefine some Bootstrap defaults
+$body-color: $industrial-text-dark;
+$font-family-base: ui-serif, Georgia, "Times New Roman", "Palatino Linotype", Palatino, "Book Antiqua", "URW Bookman", "Nimbus Roman No9 L", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+h1, h2 {font-family:sans-serif;}
+article h1 {background:$industrial-light;font-weight:bold;}
+.skillList li {background:$industrial-metal;border-radius:0.5rem;padding:0.5rem;min-width:100px;}
+#contentPage section {background:$industrial-metal;}
+
+// Then import Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+img.rounded-circle {width:4.5rem;height:4.5rem;}
+
+a:link {color:#2b7fff;text-decoration:none;}
+a:visited {color:#2b7fff;}
+a:hover {color:#1447e6;}
+a:active {color:#2b7fff;}
+
+// Bootstrap does not have lg: like tailwind, so we do this.
+@media (min-width:1024px) {
+  .rounded-lg {border-radius:0.5rem;}
+}

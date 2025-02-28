@@ -8,41 +8,40 @@
 </head>
 
 <body>
-  <div class="max-w-7xl mx-auto">
-    <header class="hero mx-4 my-4 font-sans">
-      <div class="flex gap-2">
+  <div class="container-xl mx-auto px-0">
+    <header class="px-2">
+      <div class="d-flex gap-2">
         <figure class="w-18 h-18">
-          <img src="/profile1small.jpg" class="rounded-full" alt="Jacob" />
+          <img src="/profile1small.jpg" class="rounded-circle" alt="Jacob" />
         </figure>
         <div>
-          <h1 class="text-2xl font-bold">Jacob Kristensen</h1>
-          <p><a href="https://github.com/Turbulentarius">@turbulentarius</a></p>
+          <div class="fs-4">Jacob Kristensen</div>
+          <div class="fs-6"><a href="https://github.com/Turbulentarius">@turbulentarius</a></div>
         </div>
       </div>
 
-      <div class="px-4 py-4 font-serif">
+      <div class="px-2">
         <p>I am a Web Developer from Denmark with a diverse skill set and a passion for technology.</p>
 
-        <p>Currently, I am pursuing a Bachelor's degree in Web Development at Zealand, where I am honing my
-          skills
+        <p>Currently, I am pursuing a Bachelor's degree in Web Development at Zealand, where I am honing my skills
           and diving deep into React.</p>
       </div>
 
-      <nav aria-label="breadcrumbs">
-        <ul class="flex">
-          <li><a href="turbulentarius.html">Home</a></li>
-          <li><b>Employment history</b></li>
-          <li><a href="project.html">Projects</a></li>
+      <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item"><a href="turbulentarius.html">Home</a></li>
+          <li class="breadcrumb-item"><b>Employment history</b></li>
+          <li class="breadcrumb-item"><a href="project.html">Projects</a></li>
         </ul>
       </nav>
     </header>
 
     <article id="contentPage">
-      <h1>Employment history</h1>
+      <h1 class="py-2 px-2 fs-2 rounded-lg">Employment history</h1>
 
-      <section>
-        <h2 class="text-bold text-xl">Fitness Engros</h2>
-        <div class="mb-4 font-sans"><i>Febuary 2022</i> to <i>Marts 2024</i> — Full Stack Developer</div>
+      <section class="my-4 mx-4 px-4 py-2 rounded-lg">
+        <h2 class="fs-5">Fitness Engros</h2>
+        <div class="mb-4"><i>Febuary 2022</i> to <i>Marts 2024</i> — Full Stack Developer</div>
         <div class="px-4 py-4">
           <p>Fitness Engross was using an old version of <b>Shopware</b> that had various bugs and
             problems — all of which I solved — one of the most serious bugs prevented us from updating.
@@ -66,15 +65,15 @@
             Zealand.
           </p>
         </div>
-        <div class="text-center py-4 font-sans"><b>Tech</b>:
+        <div><b>Tech</b>:
           <i>Shopware</i>, <i>Vue.js</i>, <i>PHP</i>, <i>Composer</i>, <i>Twig</i>, <i>Tailwindcss</i>,
           <i>Nginx</i>, <i>Redis</i>, <i>MariaDB</i>, <i>Elasticsearch</i>, <i>Cron</i>
         </div>
       </section>
 
-      <section>
-        <h2 class="text-bold text-xl">BITD ApS / Virtuly ApS</h2>
-        <div class="mb-4 font-sans">~ <i>2021</i> to <i>2022</i> — Wordpress Developer</div>
+      <section class="my-4 mx-4 px-4 py-2 rounded-lg">
+        <h2 class="fs-5">BITD ApS / Virtuly ApS</h2>
+        <div class="mb-4">~ <i>2021</i> to <i>2022</i> — Wordpress Developer</div>
         <div class="px-4 py-4">
           <p>I worked with various ad-hoc Wordpress development tasks for their clients.
             Doing this time I became quite good at creating and working with Wordpress plugins, as well
@@ -92,7 +91,7 @@
             a lot of scrolling up and down just to find things.
             This was before I knew about <b>grep -r "something"</b>.</p>
         </div>
-        <div class="text-center py-4 font-sans"><b>Tech</b>:
+        <div><b>Tech</b>:
           <i>Wordpress</i>, <i>PHP</i>, <i>JavaScript</i>, <i>HTML</i>, <i>CSS</i>
         </div>
       </section>
