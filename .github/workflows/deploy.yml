@@ -20,6 +20,10 @@ jobs:
       - name: Install Dependencies
         run: npm install || echo "No dependencies to install"
 
+      # This is seemingly needed because github pages expects the file to be named specifically index.html
+      - name: Rename turbulentarius.html to index.html
+        run: mv turbulentarius.html index.html
+
      # - name: Compile SCSS to CSS (if applicable)
       #  run: npm run build-css || echo "No SCSS compilation needed"
 
@@ -28,9 +32,7 @@ jobs:
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
-       # with:
-         # path: ./  # Deploy the root folder
         with:
-            path: ./
+            path: .
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
