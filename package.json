@@ -5,7 +5,7 @@
   "scripts": {
     "build": "postcss src/styles/tailwind.css -o build/css/main.css",
     "build-watch": "postcss src/styles/tailwind.css -o build/css/main.css --watch",
-    "dev": "concurrently \"npm run build-watch\" \"live-server --entry-file=turbulentarius.html ./\""
+    "dev": "concurrently \"npm run build-watch\" \"live-server ./\""
   },
   "devDependencies": {
     "concurrently": "^9.1.2",
