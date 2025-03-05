@@ -24,8 +24,8 @@ jobs:
       - name: Rename turbulentarius.html to index.html
         run: mv turbulentarius.html index.html
 
-     # - name: Compile SCSS to CSS (if applicable)
-      #  run: npm run build-css || echo "No SCSS compilation needed"
+      - name: Debug - List Files Before Upload
+        run: ls -al ./
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
