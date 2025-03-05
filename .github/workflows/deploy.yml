@@ -8,7 +8,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+
     environment:
       name: github-pages
 
@@ -23,6 +23,10 @@ jobs:
         # If any node modules are needed, they should be installed in this step
       - name: Install Dependencies
         run: npm install || echo "No dependencies to install"
+
+        # Ensure the built .CSS is always up-to-date
+      - name: Build CSS before deploying
+        run: npm run build
 
         # Source: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
       - name: Setup Pages
