@@ -21,9 +21,8 @@ jobs:
         run: npm install || echo "No dependencies to install"
 
       # This is seemingly needed because github pages expects the file to be named specifically index.html
-      - name: Create Redirecting index.html
-        run: echo '<!DOCTYPE html><html><head><script>window.location.href="turbulentarius.html";</script></head><body><p>If you are not redirected, <a href="turbulentarius.html">click here</a>.</p></body></html>' > index.html
-    
+      - name: Generate index.html from turbulentarius.html
+        run: cp turbulentarius.html index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
