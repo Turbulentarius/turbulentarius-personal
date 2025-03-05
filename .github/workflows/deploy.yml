@@ -25,6 +25,9 @@ jobs:
         run: npm install || echo "No dependencies to install"
 
         # Ensure the built .CSS is always up-to-date
+        # This step builds my css to build/css/main.css
+        # but for some reason it is not deploying this file unless the entire build folder is
+        # included in github
       - name: Build CSS before deploying
         run: npm run build
 
@@ -37,7 +40,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-            path: .
+            path: ./build
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4

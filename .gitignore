@@ -1,1 +1,5 @@
+# These should not be needed for deployment, because GitHub actions should run
+# the steps to generate them
+
+build
 node_modules/
