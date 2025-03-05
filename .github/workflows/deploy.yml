@@ -8,6 +8,9 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    
+    environment:
+      name: github-pages
 
     permissions:
       id-token: write  # Required for deployment authentication
@@ -21,8 +24,9 @@ jobs:
       - name: Install Dependencies
         run: npm install || echo "No dependencies to install"
 
+        # Source: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
         # This step expects a index.html file.
         # I had to rename my custom index file because GitHub pages does not support changing the directory index
