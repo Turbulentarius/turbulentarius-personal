@@ -1,0 +1,35 @@
+name: Deploy tailwind Project
+
+on:
+  push:
+    branches:
+      - deploy
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write  # Required for deployment authentication
+      pages: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+        # If any node modules are needed, they should be installed in this step
+      - name: Install Dependencies
+        run: npm install || echo "No dependencies to install"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+        # This step expects a index.html file.
+        # I had to rename my custom index file because GitHub pages does not support changing the directory index
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+            path: .
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
