@@ -16,6 +16,7 @@ header nav li:last-child::after {content: '';}
 .githublink svg {width: 1.6rem;height: 1.6rem;flex-shrink: 0;}
 
 #contentPage section {@apply mx-4 my-4 px-4 rounded-lg bg-industrial-metal;}
+
 article h1 {@apply bg-industrial-light py-2 px-2 text-2xl min-w-full font-bold xl:rounded-lg font-sans;}
 article h2 {@apply font-sans;}
 p {@apply pb-4;}
