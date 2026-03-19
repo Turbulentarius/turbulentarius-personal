@@ -1,0 +1,44 @@
+name: Turbulentarius Portfolio Site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build app
+        run: npm run build
+
+      - name: Upload build to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: 65.21.241.43
+          username: deploybot
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "*"
+          target: "/home/deploybot/turbulentarius"
+          rm: true
+
+      - name: Trigger secure deployment on server
+        uses: appleboy/ssh-action@v1.0.3  
+        with:
+          host: 65.21.241.43
+          username: deploybot
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: touch /home/deploybot/turbulentarius/pending-deployment
+        
