@@ -13,34 +13,26 @@ jobs:
       name: github-pages
 
     permissions:
-      id-token: write  # Required for deployment authentication
+      id-token: write
       pages: write
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-        # If any node modules are needed, they should be installed in this step
       - name: Install Dependencies
         run: npm install || echo "No dependencies to install"
 
-        # Ensure the built .CSS is always up-to-date
-        # This step builds my css to build/css/main.css
-        # but for some reason it is not deploying this file unless the entire build folder is
-        # included in github
       - name: Build CSS before deploying
         run: npm run build
 
-        # Source: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-        # This step expects a index.html file.
-        # I had to rename my custom index file because GitHub pages does not support changing the directory index
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-            path: .
+          path: .
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
